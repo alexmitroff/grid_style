@@ -1,0 +1,58 @@
+/*
+Error: Invalid CSS after "...reen, max-width": expected ")", was ":$medium-screen..."
+        on line 56 of style.scss
+
+51:     @media(max-width:$small-screen-max){
+52:       >.rs2 {grid-row: span 2;}
+53:       >.rs3 {grid-row: span 3;}
+54:       >.rs4 {grid-row: span 4;}
+55:     }
+56:     @media(min-width:$medium-screen, max-width:$medium-screen-max ){
+57:       >.rm2 {grid-row: span 2;}
+58:       >.rm3 {grid-row: span 3;}
+59:       >.rm4 {grid-row: span 4;}
+60:       >.rm5 {grid-row: span 5;}
+61:       >.rm6 {grid-row: span 6;}
+
+Backtrace:
+style.scss:56
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1207:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1137:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1132:in `tok!'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:475:in `query_expr'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:448:in `media_query'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:414:in `media_query_list'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1115:in `expr!'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:409:in `media_directive'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:222:in `special_directive'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:197:in `directive'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:685:in `block_child'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:677:in `block_contents'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:666:in `block'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:658:in `ruleset'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:684:in `block_child'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:677:in `block_contents'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:125:in `stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:41:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:406:in `_to_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:473:in `on_file_changed'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:331:in `block in watch'
+/usr/lib/ruby/vendor_ruby/listen/event/config.rb:23:in `call'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:115:in `_process_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:19:in `block in loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:84:in `_wait_for_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:42:in `block in setup'
+/usr/lib/ruby/vendor_ruby/listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...reen, max-width\": expected \")\", was \":$medium-screen...\"\A         on line 56 of style.scss\A \A 51:     @media(max-width:$small-screen-max){\A 52:       >.rs2 {grid-row: span 2;}\A 53:       >.rs3 {grid-row: span 3;}\A 54:       >.rs4 {grid-row: span 4;}\A 55:     }\A 56:     @media(min-width:$medium-screen, max-width:$medium-screen-max ){\A 57:       >.rm2 {grid-row: span 2;}\A 58:       >.rm3 {grid-row: span 3;}\A 59:       >.rm4 {grid-row: span 4;}\A 60:       >.rm5 {grid-row: span 5;}\A 61:       >.rm6 {grid-row: span 6;}"; }
