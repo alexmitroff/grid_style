@@ -1,31 +1,3 @@
-$unit:1rem;
-
-@function px-rem($num) {
-      @return $unit*$num/16;
-  }
-
-/* Breakpoints */
-$medium-bp: 600;
-$big-bp: 840;
-$large-bp: 1600;
-
-$small-screen-max: px-rem($medium-bp - 1);
-$medium-screen: px-rem($medium-bp);
-$medium-screen-max: px-rem($big-bp - 1);
-$big-screen: px-rem($big-bp);
-$big-screen-max: px-rem($large-bp - 1);
-$large-screen: px-rem($large-bp);
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 16px;
-}
-
 .grid,
 .grid-fluid{
     display:grid;
@@ -53,7 +25,7 @@ html{
       >.rs3 {grid-row: span 3;}
       >.rs4 {grid-row: span 4;}
     }
-    @media(min-width:$medium-screen, max-width:$medium-screen-max ){
+    @media(min-width:$medium-screen) and (max-width:$medium-screen-max ){
       >.rm2 {grid-row: span 2;}
       >.rm3 {grid-row: span 3;}
       >.rm4 {grid-row: span 4;}
@@ -62,7 +34,7 @@ html{
       >.rm7 {grid-row: span 7;}
       >.rm8 {grid-row: span 8;}
     }
-    @media(min-width:$big-screen, max-width:$big-screen-max ){
+    @media(min-width:$big-screen) and (max-width:$big-screen-max ){
       >.rl2 {grid-row: span 2;}
       >.rl3 {grid-row: span 3;}
       >.rl4 {grid-row: span 4;}
@@ -75,14 +47,14 @@ html{
       >.rl11 {grid-row: span 11;}
       >.rl12 {grid-row: span 12;}
     }
-    
+
     /* Columns collapsing rules */
     @media(max-width:$small-screen-max){
       >.cs2 {grid-column: span 2;}
       >.cs3 {grid-column: span 3;}
       >.cs4 {grid-column: span 4;}
     }
-    @media(min-width:$medium-screen, max-width:$medium-screen-max ){
+    @media(min-width:$medium-screen) and (max-width:$medium-screen-max ){
       >.cm3 {grid-column: span 3;}
       >.cm4 {grid-column: span 4;}
       >.cm5 {grid-column: span 5;}
@@ -90,7 +62,7 @@ html{
       >.cm7 {grid-column: span 7;}
       >.cm8 {grid-column: span 8;}
     }
-    @media(min-width:$big-screen, max-width:$big-screen-max ){
+    @media(min-width:$big-screen){
       >.cl2 {grid-column: span 2;}
       >.cl3 {grid-column: span 3;}
       >.cl4 {grid-column: span 4;}
@@ -103,11 +75,13 @@ html{
       >.cl11 {grid-column: span 11;}
       >.cl12 {grid-column: span 12;}
     }
+
+    &.dense{
+      grid-auto-flow: dense;
+    }
 }
 
 .grid{
     max-width: $large-screen;
     margin: 0 auto;
 }
-
-

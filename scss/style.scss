@@ -1,0 +1,32 @@
+$unit:1rem;
+
+@function px-rem($num) {
+      @return $unit*$num/16;
+  }
+
+/* Breakpoints */
+$medium-bp: 600;
+$big-bp: 840;
+$large-bp: 1600;
+
+$small-screen-max: px-rem($medium-bp - 1);
+$medium-screen: px-rem($medium-bp);
+$medium-screen-max: px-rem($big-bp - 1);
+$big-screen: px-rem($big-bp);
+$big-screen-max: px-rem($large-bp - 1);
+$large-screen: px-rem($large-bp);
+
+$transition: all .2s ease-in 0s;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+@import './grid';
+
