@@ -2,15 +2,15 @@
 .grid-fluid{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: px-rem(16);
-    padding: 0 px-rem(16);
+    grid-gap: $small-gap;
+    padding: 0 $small-gap;
     @media(min-width:$medium-screen ){
         grid-template-columns: repeat(8, 1fr);
     }
     @media(min-width:$big-screen ){
         grid-template-columns: repeat(12, 1fr);
-        grid-gap: px-rem(24);
-        padding: 0 px-rem(24);
+        grid-gap: $big-gap;
+        padding: 0 $big-gap;
     }
 
     >div>div{
